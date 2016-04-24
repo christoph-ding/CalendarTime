@@ -2,6 +2,20 @@ body {
   background-color: #CEC3C1;
 }
 
-div {
-  border-style: inset;
+.Day-Line {
+  width: 90%;
+  height: 100px;
+  position: absolute;
+  left: 5%;
+  top: 40px;
+  border: 0.1em solid black;
+}
+
+.Day-Body {
+  width: 90%;
+  height: 1200px;
+  position: absolute;
+  left: 5%;
+  top: 180px;
+  border: 0.1em solid black;
 }
