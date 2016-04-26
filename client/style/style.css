@@ -19,3 +19,19 @@ body {
   top: 180px;
   border: 0.1em solid black;
 }
+
+.hour {
+  background-color: #064E86;
+  position: absolute;
+  width: 85%;
+  height:  95px;
+  left: 15%;
+}
+
+.hour.AM {
+  top: 43px;
+}
+
+.hour.PM {
+  top: 328px;
+}
