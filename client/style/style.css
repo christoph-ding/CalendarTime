@@ -2,6 +2,10 @@ body {
   background-color: #CEC3C1;
 }
 
+div {
+  position: relative;
+}
+
 .Day-Line {
   width: 90%;
   height: 100px;
@@ -21,17 +25,12 @@ body {
 }
 
 .hour {
-  background-color: #064E86;
-  position: absolute;
+  background-color: #F2DD6E;
+  -webkit-box-sizing: border-box;
+  border-style: solid;
+  border-width: 1px;
+  position: relative;
   width: 85%;
   height:  95px;
   left: 15%;
-}
-
-.hour.AM {
-  top: 43px;
-}
-
-.hour.PM {
-  top: 328px;
 }
