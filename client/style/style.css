@@ -7,7 +7,7 @@ body {
   position: relative;
   left: 5%;
   top: 40px;
-  border: 0.1em solid black;
+  outline:1px solid black;
   margin: 0px;
   padding: 0px;
 }
@@ -17,46 +17,32 @@ body {
 }
 
 .Day.All-Day {
-  height: 75px;  
+  height: 70px;  
 }
 
-
-
-
-.Day-Body {
-  height: 1200px;
-  position: relative;
-  left: 5%;
-  top: 80px;
-  border: 0.1em solid black;
+.Day.Body {
+  height: 1140px;
 }
 
-.in-between {
-  width: 90%;
-  height: 100px;
-  position: relative;
-  left: 5%;
-  top: 40px;
-  border: 0.1em solid black;
+.Part-of-Day {
+  outline:1px solid black;
 }
 
 .AM {
-  -webkit-box-sizing: border-box;
-  border: 0.1em solid black;
+  background-color: red;
 }
 
 .PM {
-  -webkit-box-sizing: border-box;
-  border: 0.1em solid black;
+  background-color: blue;
 }
 
 .hour {
-  background-color: #F2DD6E;
-  -webkit-box-sizing: border-box;
-  border: 0.1em solid black;
-  position: relative;
   width: 85%;
-  height:  95px;
+  height: 95px;
+  position: relative;
   left: 15%;
+  outline:1px solid black;
+  background-color: #F2DD6E;
+  opacity: 0.3;
 }
 
