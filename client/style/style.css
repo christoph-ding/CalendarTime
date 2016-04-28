@@ -2,35 +2,61 @@ body {
   background-color: #CEC3C1;
 }
 
-div {
+.Day {
+  width: 90%;
   position: relative;
+  left: 5%;
+  top: 40px;
+  border: 0.1em solid black;
+  margin: 0px;
+  padding: 0px;
 }
 
-.Day-Line {
+.Day.Date {
+  height: 100px;
+}
+
+.Day.All-Day {
+  height: 75px;  
+}
+
+
+
+
+.Day-Body {
+  height: 1200px;
+  position: relative;
+  left: 5%;
+  top: 80px;
+  border: 0.1em solid black;
+}
+
+.in-between {
   width: 90%;
   height: 100px;
-  position: absolute;
+  position: relative;
   left: 5%;
   top: 40px;
   border: 0.1em solid black;
 }
 
-.Day-Body {
-  width: 90%;
-  height: 1200px;
-  position: absolute;
-  left: 5%;
-  top: 180px;
+.AM {
+  -webkit-box-sizing: border-box;
+  border: 0.1em solid black;
+}
+
+.PM {
+  -webkit-box-sizing: border-box;
   border: 0.1em solid black;
 }
 
 .hour {
   background-color: #F2DD6E;
   -webkit-box-sizing: border-box;
-  border-style: solid;
-  border-width: 1px;
+  border: 0.1em solid black;
   position: relative;
   width: 85%;
   height:  95px;
   left: 15%;
 }
+
