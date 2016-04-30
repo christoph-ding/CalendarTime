@@ -9,17 +9,23 @@
   <script>
   var events;
 
+  function placeSomething(event) {
+    var eventStartTime = event.start_time.replace(':', '-');
+    $("." + eventStartTime + "").css( "border", "13px solid red" );
+  }
+
   (function() {
           $.ajax({
               'global': false,
               'url': "events.json",
               'dataType': "json",
               'success': function (data) {
-                  events = data;
+                  events = data.items;
                   calculateSchedule(events);
               }
           });
       })();
+
   </script>
 </head>
 <body>
@@ -33,12 +39,12 @@
       <h1 class="Label"> AM </h1>
       <section class="hour">
         <h3 class="Label"> 9:00 </h3>        
-        <section class='half-hour 9:00AM'>
+        <section class='half-hour 9-00AM'>
           <div id='test1'>
             Number 1
           </div>
         </section>
-        <section class='half-hour 9:30AM'>
+        <section class='half-hour 9-30AM'>
           <h4 class="Label"> 9:30 </h4>
           <div id='test2'>
             Number 2
@@ -50,17 +56,17 @@
       </section>
       <section class="hour">
         <h3 class="Label"> 10:00 </h3>
-        <section class='half-hour 10:00AM'>
+        <section class='half-hour 10-00AM'>
         </section>
-        <section class='half-hour 10:30AM'>
+        <section class='half-hour 10-30AM'>
           <h4 class="Label"> 10:30 </h4>
         </section>
       </section>
       <section class="hour">
         <h3 class="Label"> 11:00 </h3>
-        <section class='half-hour 11:00AM'>
+        <section class='half-hour 11-00AM'>
         </section>
-        <section class='half-hour 11:30AM'>
+        <section class='half-hour 11-30AM'>
           <h4 class="Label"> 11:30 </h4>
         </section>
       </section>
@@ -70,73 +76,73 @@
       <h1 class="Label"> PM </h1>
       <section class="hour">
         <h3 class="Label"> 12:00 </h3>
-        <section class='half-hour 12:00PM'>
+        <section class='half-hour 12-00PM'>
         </section>
-        <section class='half-hour 12:30PM'>
+        <section class='half-hour 12-30PM'>
           <h4 class="Label"> 12:30 </h4>
         </section>
       </section>
       <section class="hour">
         <h3 class="Label"> 1:00 </h3>
-        <section class='half-hour 1:00PM'>
+        <section class='half-hour 1-00PM'>
         </section>
-        <section class='half-hour 1:30PM'>
+        <section class='half-hour 1-30PM'>
           <h4 class="Label"> 1:30 </h4>
         </section>
       </section>
       <section class="hour">
         <h3 class="Label"> 2:00 </h3>
-        <section class='half-hour 2:00PM'>
+        <section class='half-hour 2-00PM'>
         </section>
-        <section class='half-hour 2:30PM'>
+        <section class='half-hour 2-30PM'>
           <h4 class="Label"> 2:30 </h4>
         </section>
       </section>
       <section class="hour">
         <h3 class="Label"> 3:00 </h3>
-        <section class='half-hour 3:00PM'>
+        <section class='half-hour 3-00PM'>
         </section>
-        <section class='half-hour 3:30PM'>
+        <section class='half-hour 3-30PM'>
           <h4 class="Label"> 3:30 </h4>
         </section>
       </section>
       <section class="hour">
         <h3 class="Label"> 4:00 </h3>
-        <section class='half-hour 4:00PM'>          
+        <section class='half-hour 4-00PM'>          
         </section>
-        <section class='half-hour 4:30PM'>
+        <section class='half-hour 4-30PM'>
           <h4 class="Label"> 4:30 </h4>
         </section>
       </section>
       <section class="hour">
         <h3 class="Label"> 5:00 </h3>
-        <section class='half-hour 5:00PM'>
+        <section class='half-hour 5-00PM'>
         </section>
-        <section class='half-hour 5:30PM'>
+        <section class='half-hour 5-30PM'>
           <h4 class="Label"> 5:30 </h4>
         </section>
       </section>
       <section class="hour">
         <h3 class="Label"> 6:00 </h3>
-        <section class='half-hour 6:00PM'>
+        <section class='half-hour 6-00PM'>
         </section>
-        <section class='half-hour 6:30PM'>
+        <section class='half-hour 6-30PM'>
           <h4 class="Label"> 6:30 </h4>
         </section>
       </section>
       <section class="hour">
         <h3 class="Label"> 7:00 </h3>
-        <section class='half-hour 7:00PM'>
+        <section class='half-hour 7-00PM'>
         </section>
-        <section class='half-hour 7:30PM'>
+        <section class='half-hour 7-30PM'>
           <h4 class="Label"> 7:30 </h4>
         </section>
       </section>
       <section class="hour">
         <h3 class="Label"> 8:00 </h3>
-        <section class='half-hour 8:00PM'>
+        <section class='half-hour 8-00PM'>
         </section>
-        <section class='half-hour 8:30PM'>
+        <section class='half-hour 8-30PM'>
           <h4 class="Label"> 8:30 </h4>
         </section>
       </section>

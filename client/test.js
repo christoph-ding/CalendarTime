@@ -64,5 +64,5 @@ var calculateWidth = function(event) {
 
 var calculateHeight = function(event) {
   return 48 * getHalfHourChunks(event);
-} 
+}
 
