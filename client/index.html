@@ -3,12 +3,22 @@
 <head>
   <meta charset="utf-8">
   <title> Daily Plan It </title>
-  <link rel="stylesheet" type="text/css" href="/style/style.css">
-
-  
-
-
-
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="jquery-1.12.3.min.js"></script>
+  <script>
+  var events;
+  (function() {
+          $.ajax({
+              'global': false,
+              'url': "events.json",
+              'dataType': "json",
+              'success': function (data) {
+                  events = data;
+                  console.log('our target event is: ', events.items[1]);
+              }
+          });
+      })();
+  </script>
 </head>
 <body>
   <div class="Day Date">  
@@ -22,9 +32,18 @@
       <section class="hour">
         <h3 class="Label"> 9:00 </h3>        
         <section class='half-hour'>
+          <div id='test1'>
+            Number 1
+          </div>
         </section>
         <section class='half-hour'>
           <h4 class="Label"> 9:30 </h4>
+          <div id='test2'>
+            Number 2
+          </div>
+          <div id='test3'>
+            Number 3
+          </div>
         </section>
       </section>
       <section class="hour">
