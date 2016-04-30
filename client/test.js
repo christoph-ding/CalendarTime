@@ -24,7 +24,7 @@ var schedule = {
   "7:00PM": [],
   "7:30PM": [],
   "8:00PM": [],
-  "8:30PM": [],
+  "8:30PM": []
 };
 
 var calculateSchedule = function(items) {
@@ -63,6 +63,15 @@ var calculateWidth = function(event) {
 }
 
 var calculateHeight = function(event) {
-  return 48 * getHalfHourChunks(event);
+  return 48 * getHalfHourChunks(event).length;
+}
+
+function placeSomething(event) {
+  var eventStartTime = event.start_time.replace(':', '-');
+  var eventWidth = calculateWidth(event);
+  var eventHeight = calculateHeight(event);
+  console.log("starts: ", eventStartTime, " ends: ", event.end_time, " width: ", eventWidth, " height: ", eventHeight);
+  var newElement = "<h1 style=\"background-color:blue; margin: 0% 0% 0% 10%; border: 0px; height:" + eventHeight + "px; width: " + eventWidth + "%;\">" + event.title + "</h1>"; 
+  $("." + eventStartTime + "").append(newElement);
 }
 
