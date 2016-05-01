@@ -59,7 +59,7 @@ var getMaxShared = function(event) {
 }
 
 var calculateWidth = function(event) {
-  return 90 / getMaxShared(event);
+  return 90 / getMaxShared(event) - 2;
 }
 
 var calculateHeight = function(event) {
@@ -71,7 +71,7 @@ function placeSomething(event) {
   var eventWidth = calculateWidth(event);
   var eventHeight = calculateHeight(event);
   console.log("starts: ", eventStartTime, " ends: ", event.end_time, " width: ", eventWidth, " height: ", eventHeight);
-  var newElement = "<h1 style=\"background-color:blue; margin: 0% 0% 0% 10%; border: 0px; height:" + eventHeight + "px; width: " + eventWidth + "%;\">" + event.title + "</h1>"; 
+  var newElement = "<h1 style=\"background-color:blue; float: left; margin: 0%; border: 0px; height:" + eventHeight + "px; width: " + eventWidth + "%;\">" + event.title + "</h1>"; 
   $("." + eventStartTime + "").append(newElement);
 }
 

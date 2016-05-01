@@ -2,26 +2,8 @@ body {
   background-color: #CEC3C1;
 }
 
-#test1 {
-  background-color: blue; 
-  height: 100px;
-  width: 30%;
-  margin-left: 10%;
-  float: left;
-}
-
-#test2 {
-  background-color: blue; 
-  height: 100px;
-  width: 30%;
-  float: right;
-}
-
-#test3 {
-  background-color: blue; 
-  height: 100px;
-  width: 30%;
-  float: right;
+span {
+  display: inline-block;
 }
 
 .Day {
@@ -67,14 +49,19 @@ body {
 }
 
 .half-hour {
-  width: 77%;
+  width: 84%;
   height: 48px;
   position: relative;
-  left: 23%;
+  left: 16%;
   outline:1px solid gray;
 }
 
 .Label {
   position: absolute;
   margin: 2%;
+}
+
+.Label.half {
+  position: absolute;
+  top: 50%;
 }
